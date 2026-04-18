@@ -7,6 +7,9 @@
     <link rel="stylesheet"
     href="style.css">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdcjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -23,8 +26,6 @@
 
     <section id="hero">
         <div class="hero-content">
-            <h2>Welcome to Heavenly Relaxation spa</h2>
-            <p>The First Spa in Alexandra Township</p>
             <a href="#booking"
             class="btn">Book Appointment</a>
         </div>
@@ -76,54 +77,129 @@
     </section>
 
     <section id="gallery">
-        <h2>Gallery</h2>
+    <h2>Our Work</h2>
 
-        <div class="gallery-images">
-            <img src="images/style1.jpg" alt="Nails">
-            <img src="images/style2.jpg" alt="waxing">
-            <img src="images/style3.jpg" alt="massage">
-            <img src="images/style4.jpg" alt="makeup">
-            <img src="images/style4.jpg" alt="Eyelashes">
-            <img src="images/style4.jpg" alt="Masterclass">
+    <div class="gallery-wrapper">
+        <div class="gallery-container">
+            <img src="images/nails1.jpg">
+            <img src="images/massage1.jpg">
+            <img src="images/makeup1.jpg">
+            <img src="images/Masterclass1.jpg">
+            <img src="images/Eyelashes1.jpg">
         </div>
+    </div>
+</section>
 
-    </section>
+    <div class="whatsapp-booking">
+    <h3>Book via WhatsApp</h3>
+
+    <p>Get a faster response by booking directly on WhatsApp.</p>
+
+    <a href="https://wa.me/27789478653?text=Hi%20I%20would%20like%20to%20book%20an%20appointment.%0A%0AName:%20%0AService:%20%0ADate:%20%0ATime:" 
+       class="whatsapp-btn" 
+       target="_blank">
+       Book on WhatsApp
+    </a>
+
+    <p id="successMessage" style="display:none; color: green; margin-top:10px;">
+        WhatsApp opened. Please press SEND to confirm your booking.
+    </p>
+</div>
+
+<div class="divider">
+    <span>OR</span>
+</div>
+
 
     <section id="booking">
         <h2>Book an Appointment</h2>
     
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="tel" placeholder="Phone Number" required>
+        <form id="bookingForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
     
-            <select required>
-                <option value="">Select Service</option>
-                <option>Nails</option>
-                <option>Waxing</option>
-                <option>Spa massage</option>
-                <option>Masterclass</option>
-                <option>Makeup</option>
-                <option>Eyelashes</option>
-            </select>
-    
-            <input type="date" required>
-            <button type="submit">Book Now</button>
-        </form>
+    <select name="service">
+        <option>Spa Massage</option>
+        <option>Nails</option>
+        <option>Waxing</option>
+        <option>Eyelashes</option>
+        <option>Makeup</option>
+        <option>Masterclass</option>
+    </select>
+
+    <input type="text" name="date" id="selectedDate" placeholder="Select a date" readonly>
+
+    <button type="submit">Book Now</button>
+</form>
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
     
+        <div class="contact-info">
         <p>📍 111 15th Avenue, Alexandra, South Africa, 2090</p>
         <p>📞 078 947 8653</p>
         <p>📧 HeavenlySpa13@gmail.com</p>
+    </div>
     </section>
 
     <footer>
         <p>&copy; 2026 Heavenly Relaxation Spa. All rights reserved.</p>
+
+        <div class="socials">
+            <a href="https://www.instagram.com/heavenly_beautycreatives/">Instagram</a>
+            <a href="https://www.facebook.com/heavenlyrelaxationspa?locale=en_GB">Facebook</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
+
+    <a href="https://wa.me/27789478653?text=Hi%20I%20want%20to%20book%20a%20service" 
+   class="whatsapp-float" 
+   target="_blank">
+   💬
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("caIRb4ngTycRSpVV5");
+})();
+</script>
+
+
+<script>
+const container = document.querySelector(".gallery-container");
+
+
+let autoSlide = setInterval(() => {
+    container.scrollBy({ left: 300, behavior: "smooth" });
+
+    // Reset to start when reaching end
+    if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+    }
+}, 3000);
+</script>
+
+<script>
+const wrapper = document.querySelector(".gallery-wrapper");
+
+wrapper.addEventListener("mouseenter", () => {
+    clearInterval(autoSlide);
+});
+
+wrapper.addEventListener("mouseleave", () => {
+    autoSlide = setInterval(() => {
+        container.scrollBy({ left: 300, behavior: "smooth" });
+
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+            container.scrollTo({ left: 0, behavior: "smooth" });
+        }
+    }, 3000);
+});
+</script>
+
 </body>
 </html>
