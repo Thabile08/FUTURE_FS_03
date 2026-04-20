@@ -1,205 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salon Website</title>
-    <link rel="stylesheet"
-    href="style.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heavenly Relaxation Spa</title>
 
-    <link rel="stylesheet"
-    href="https://cdcjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
-    <nav class="navbar">
-        <h1 class="logo">Heavenly Relaxation spa</h1>
 
-        <ul class="nav-links">
-            <li><a href="#hero">Home</a>
-            </li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#booking">Book</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<header class="navbar">
+  <h1 class="logo">Heavenly Relaxation Spa</h1>
 
-    <section id="hero">
-        <div class="hero-content">
-            <a href="#booking"
-            class="btn">Book Appointment</a>
-        </div>
-    </section>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <section id="services">
-        <h2>Our Services</h2>
-    
-    
-        <h3>Main Services</h3>
-        <div class="service-list">
-    
-            <div class="service">
-                <h4>Nails</h4>
-                <p>Manicure, pedicure & nail art</p>
-            </div>
-    
-            <div class="service">
-                <h4>Waxing</h4>
-                <p>Full body & facial waxing</p>
-            </div>
-    
-            <div class="service">
-                <h4>Massage</h4>
-                <p>Relaxing and therapeutic massage</p>
-            </div>
-    
-        </div>
-    
-        <h3>Beauty $ Training</h3>
-        <div class="service-list">
-    
-            <div class="service">
-                <h4>Makeup</h4>
-                <p>Professional makeup for all occasions</p>
-            </div>
-    
-            <div class="service">
-                <h4>Eyelashes</h4>
-                <p>Classic & volume lash extensions</p>
-            </div>
-    
-            <div class="service">
-                <h4>Beginner Masterclass</h4>
-                <p>Learn basic beauty techniques</p>
-            </div>
-    
-        </div>
-    </section>
-
-    <section id="gallery">
-    <h2>Our Work</h2>
-
-    <div class="gallery-wrapper">
-        <div class="gallery-container">
-            <img src="images/nails1.jpg">
-            <img src="images/massage1.jpg">
-            <img src="images/makeup1.jpg">
-            <img src="images/Masterclass1.jpg">
-            <img src="images/Eyelashes1.jpg">
-        </div>
-    </div>
+<section id="hero" class="hero">
+  <div class="hero-content">
+    <h2>Luxury. Relaxation. Beauty.</h2>
+    <p><strong>First Spa in Alexandra</strong></p>
+    <a href="#services" class="btn">Explore Services</a>
+  </div>
 </section>
 
-    <div class="whatsapp-booking">
-    <h3>Book via WhatsApp</h3>
 
-    <p>Get a faster response by booking directly on WhatsApp.</p>
+<section id="services" class="section">
+  <h2>Our Services</h2>
 
-    <a href="https://wa.me/27789478653?text=Hi%20I%20would%20like%20to%20book%20an%20appointment.%0A%0AName:%20%0AService:%20%0ADate:%20%0ATime:" 
-       class="whatsapp-btn" 
-       target="_blank">
-       Book on WhatsApp
+  <div class="grid">
+    <div class="card" data-img="images/nails.jpg">Nails</div>
+    <div class="card" data-img="images/massage.jpg">Massage</div>
+    <div class="card" data-img="images/waxing.jpg">Waxing</div>
+    <div class="card" data-img="images/makeup.jpg">Makeup</div>
+    <div class="card" data-img="images/eyelashes.jpg">Lashes</div>
+    <div class="card" data-img="images/masterclass.jpg">Training</div>
+  </div>
+
+  
+  <div class="service-display">
+    <img id="serviceImage" src="images/nails.jpg" alt="Service preview">
+    <p id="serviceTitle">Nails</p>
+  </div>
+
+  <section id="ceo" class="section">
+  <div class="ceo-container">
+
+    <img src="images/ceo.jpg" alt="CEO" class="ceo-image">
+
+    <div class="ceo-text">
+      <h2>Meet the Founder</h2>
+      <h3>CEO - Ms. Xolile Kubeka</h3>
+
+      <p>
+        Passionate about beauty and wellness, our founder has built Heavenly Relaxation Spa in the heart of Alexandra Township,it is known as the First spa in the the Township
+    . With years of experience in the beauty industry, 
+        she is dedicated to helping clients feel confident, relaxed, and empowered.
+      </p>
+
+      <p>
+        Her mission is simple: deliver high-quality services while creating a peaceful and 
+        welcoming environment for every client.
+      </p>
+    </div>
+
+  </div>
+  </section>
+
+  <section id="interviews" class="section dark">
+  <h2>Interviews & Features</h2>
+
+  <div class="interview-grid">
+
+    <div class="interview-card">
+      <h3>Beauty Industry Talk</h3>
+      <p>Featured discussion on beauty trends and entrepreneurship.</p>
+      <a href="#" target="_blank">Watch Interview</a>
+    </div>
+
+    <div class="interview-card">
+      <h3>Women in Business</h3>
+      <p>Sharing insights on building a successful spa brand.</p>
+      <a href="#" target="_blank">Read Article</a>
+    </div>
+
+    <div class="interview-card">
+      <h3>Local Spotlight</h3>
+      <p>Recognized as a growing beauty business in Johannesburg.</p>
+      <a href="#" target="_blank">View Feature</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking">
+  <h2>Book Your Appointment</h2>
+  <a href="https://wa.me/27648080902" class="btn whatsapp">Book on WhatsApp</a>
+</section>
+
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>📍 Alexandra, Johannesburg</p>
+  <p>📞 078 947 8653</p>
+  <p>📧 HeavenlySpa13@gmail.com</p>
+</section>
+
+
+<footer>
+  <p>© 2026 Heavenly Relaxation Spa</p>
+
+  <div class="socials">
+    <a href="https://www.instagram.com/heavenly_beautycreatives/" target="_blank">
+      <i class="fab fa-instagram"></i>
     </a>
 
-    <p id="successMessage" style="display:none; color: green; margin-top:10px;">
-        WhatsApp opened. Please press SEND to confirm your booking.
-    </p>
-</div>
+    <a href="https://www.facebook.com/heavenlyrelaxationspa" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </div>
 
-<div class="divider">
-    <span>OR</span>
-</div>
+</footer>
 
 
-    <section id="booking">
-        <h2>Book an Appointment</h2>
-    
-        <form id="bookingForm">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    
-    <select name="service">
-        <option>Spa Massage</option>
-        <option>Nails</option>
-        <option>Waxing</option>
-        <option>Eyelashes</option>
-        <option>Makeup</option>
-        <option>Masterclass</option>
-    </select>
+<a href="https://wa.me/27648080902" class="whatsapp-float">💬</a>
 
-    <input type="text" name="date" id="selectedDate" placeholder="Select a date" readonly>
-
-    <button type="submit">Book Now</button>
-</form>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-    
-        <div class="contact-info">
-        <p>📍 111 15th Avenue, Alexandra, South Africa, 2090</p>
-        <p>📞 078 947 8653</p>
-        <p>📧 HeavenlySpa13@gmail.com</p>
-    </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Heavenly Relaxation Spa. All rights reserved.</p>
-
-        <div class="socials">
-            <a href="https://www.instagram.com/heavenly_beautycreatives/">Instagram</a>
-            <a href="https://www.facebook.com/heavenlyrelaxationspa?locale=en_GB">Facebook</a>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-
-    <a href="https://wa.me/27789478653?text=Hi%20I%20want%20to%20book%20a%20service" 
-   class="whatsapp-float" 
-   target="_blank">
-   💬
-</a>
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-(function(){
-    emailjs.init("caIRb4ngTycRSpVV5");
-})();
-</script>
-
-
-<script>
-const container = document.querySelector(".gallery-container");
-
-
-let autoSlide = setInterval(() => {
-    container.scrollBy({ left: 300, behavior: "smooth" });
-
-    // Reset to start when reaching end
-    if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-        container.scrollTo({ left: 0, behavior: "smooth" });
-    }
-}, 3000);
-</script>
-
-<script>
-const wrapper = document.querySelector(".gallery-wrapper");
-
-wrapper.addEventListener("mouseenter", () => {
-    clearInterval(autoSlide);
-});
-
-wrapper.addEventListener("mouseleave", () => {
-    autoSlide = setInterval(() => {
-        container.scrollBy({ left: 300, behavior: "smooth" });
-
-        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-            container.scrollTo({ left: 0, behavior: "smooth" });
-        }
-    }, 3000);
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

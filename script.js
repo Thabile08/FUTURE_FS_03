@@ -1,22 +1,27 @@
-<p id="successMessage" style="display:none; color: green;">
-    WhatsApp opened. Please press SEND to confirm your booking.
-</p>
 
-document.querySelector(".whatsapp-btn").addEventListener("click", function() {
-    document.getElementById("successMessage").style.display = "block";
-});
-
-
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
+document.querySelectorAll("a[href^='#']").forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
     e.preventDefault();
-
-    emailjs.sendForm("service_iky29yg", "template_txfn1uu", this)
-        .then(() => {
-            alert("Booking sent successfully!");
-            this.reset();
-        }, (error) => {
-            alert("Error sending booking");
-            console.log(error);
-        });
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
 });
 
+
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".navbar");
+  nav.style.boxShadow = window.scrollY > 50 
+    ? "0 2px 10px rgba(0,0,0,0.5)" 
+    : "none";
+});
+
+const cards = document.querySelectorAll(".card");
+const image = document.getElementById("serviceImage");
+const title = document.getElementById("serviceTitle");
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    image.src = card.getAttribute("data-img");
+    title.textContent = card.textContent;
+  });
+});
